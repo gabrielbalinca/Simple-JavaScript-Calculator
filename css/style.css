@@ -68,9 +68,9 @@ button:hover{
 .title > h1{
   font-size: 4em;
   font-family: Consolas;
+  padding-left: 5%;
 }
 .calculator{
-  /* border: 5px solid white; */
   width: 450px;
   margin-top: 5%;
 }
@@ -110,4 +110,8 @@ input[type=number] {
   width: 100px;
   height: 100px;
   margin: 1%;
+}
+.numpad > button, .display > button{
+  font-size: 24px;
+  font-family: Consolas;
 }

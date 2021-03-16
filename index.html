@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <title>Simple Calculator</title>
   </head>
@@ -15,7 +16,7 @@
         <div class="calculator d-flex flex-direction-column">
           <div class="display d-flex flex-direction-row">
             <button id="delete">CE</button>
-              <input type="text" name="display" id="display" disabled/>
+              <input type="text" pattern ='[0-9.]+' name="display" id="display" disabled/>
           </div>
           <div class="numpad d-flex flex-direction-row flex-wrap justify-content-space-between align-items">
               <button onclick="number(1)">1</button>
@@ -38,6 +39,6 @@
         </div>
       </div>
     </main>
-    <script src="js/calculator.js"></script>
+    <script src='js/calculator.js'></script>
   </body>
 </html>

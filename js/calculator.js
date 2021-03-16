@@ -1,21 +1,55 @@
-var equation = "";
+var equation = '';
 var OperatorCheck = false;
-var dispValue = document.getElementById("display").value;
 
-document.getElementById("delete").addEventListener("click", function clear(){
+document.getElementById('delete').addEventListener('click', function clear(){
   equation = 0;
   OperatorCheck = false;
-  document.getElementById("display").value = "";
+  document.getElementById('display').value = '';
 });
+document.addEventListener('keypress', function(event){
+  const isNumber = isFinite(event.key);
+  if(isNumber == true){
+    number(event.key);
+  }else if(event.key == '+'){
+    if(document.getElementById('display').value != '' && document.getElementById('display').value != '0'){
+      op(event.key);
+    }
+  }else if(event.key == '-'){
+    if(document.getElementById('display').value != '' && document.getElementById('display').value != '0'){
+      op(event.key);
+    }
+  }else if(event.key == '/'){
+    if(document.getElementById('display').value != '' && document.getElementById('display').value != '0'){
+      op(event.key);
+    }
+  }else if(event.key == '*'){
+    if(document.getElementById('display').value != '' && document.getElementById('display').value != '0'){
+      op(event.key);
+    }
+  }else if(event.key == '='){
+    if(document.getElementById('display').value != '' && document.getElementById('display').value != '0'){
+      equal();
+    }
+  }else if(event.key == 'Enter'){
+    if(document.getElementById('display').value != '' && document.getElementById('display').value != '0'){
+      equal();
+    }
+  }
+});
+
 function display(disp){
-  if(dispValue != '0'){
-    document.getElementById("display").value += disp;
-  }else{
-    document.getElementById("display").value = disp;
+  if(document.getElementById('display').value == '' && disp == '0'){
+    document.getElementById('display').value == ''
+  }else {
+    if(document.getElementById('display').value.length < 7){
+      document.getElementById('display').value += disp;
+    }else{
+      alert('Display limit exceeded !');
+    }
   }
 }
 function numberDot(){
-  if(equation != 0 && document.getElementById("display").value != ''){
+  if(equation != 0 && document.getElementById('display').value != ''){
     display('.');
     equation += '.';
   }
@@ -27,7 +61,7 @@ function number(n){
 }
 function op(a){
   if(OperatorCheck == true){
-    if(equation != 0){
+    if(equation != '0'){
       display(a);
     }
     if(a == '\xD7'){
@@ -38,7 +72,7 @@ function op(a){
     equation = equation + a;
     OperatorCheck = false;
   }else if(OperatorCheck == false){
-    if(dispValue == ""){
+    if(document.getElementById('display').value == ''){
       if(a == '-' || a == '+'){
         equation += a;
         display(equation);
@@ -48,5 +82,5 @@ function op(a){
 }
 function equal(){
   equation = eval(equation);
-  document.getElementById("display").value = equation;
+  document.getElementById('display').value = equation;
 }
