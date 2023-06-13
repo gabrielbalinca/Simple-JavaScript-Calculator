@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/background-image.css">
+        <title>Simple Calculator</title>
+    </head>
+    <body>
+        <main>
+            <div class="container d-flex align-horizontal-center align-vertical-center flex-direction-column">
+                <div class="title">
+                    <h1>Simple Calculator</h1>
+                </div>
+                <div class="calculator d-flex flex-direction-column">
+                    <div class="display d-flex flex-direction-row">
+                        <button data-all-clear>CE</button>
+                        <input type="text" data-display disabled/>
+                    </div>
+                    <div class="numpad d-flex flex-direction-row flex-wrap justify-content-space-between align-items">
+                        <button data-number>1</button>
+                        <button data-number>2</button>
+                        <button data-number>3</button>
+                        <button data-operator>+</button>
+                        <button data-number>4</button>
+                        <button data-number>5</button>
+                        <button data-number>6</button>
+                        <button data-operator>-</button>
+                        <button data-number>7</button>
+                        <button data-number>8</button>
+                        <button data-number>9</button>
+                        <button data-operator>&times;</button>
+                        <button data-number>.</button>
+                        <button data-number>0</button>
+                        <button data-equal>=</button>
+                        <button data-operator>&#247;</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    <script src='./js/calculator.js'></script>
+  </body>
+</html>
