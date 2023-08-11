@@ -6,9 +6,9 @@ const display = document.querySelector('[data-display]');
 
 class Calculator{
     clear(){
-        this.calcValue = undefined;
-        this.operator = undefined;
-        this.secondOperand = undefined;
+        this.calcValue = null;
+        this.operator = null;
+        this.secondOperand = null;
         display.value = '';
     }
 
@@ -57,8 +57,8 @@ class Calculator{
                 default:
                     return;
             }
-            this.operator = undefined;
-            this.secondOperand = undefined;
+            this.operator = null;
+            this.secondOperand = null;
         }
         
 
